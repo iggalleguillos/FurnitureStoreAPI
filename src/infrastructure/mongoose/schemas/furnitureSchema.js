@@ -4,7 +4,7 @@ const uuid = require('uuid');
 const Material = require('./materialSchema');
 
 const furniture = new mongoose.Schema({
-    id: {
+    _id: {
         type: String,
         default: uuid.v4()
     },

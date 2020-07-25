@@ -7,6 +7,7 @@ const bodyParser = require('koa-bodyparser');
 const app = new Koa();
 
 const positionRouter = require('./src/infrastructure/routes/position');
+const employeeRouter = require('./src/infrastructure/routes/employee');
 
 const mongoConnect = require('./src/infrastructure/mongoose/mongoose');
 
@@ -17,7 +18,9 @@ mongoConnect().then(() =>{
 });
 
 app.use(bodyParser());
+
 app.use(positionRouter.routes());
+app.use(employeeRouter.routes());
 
 http.createServer(app.callback()).listen(3000, () =>{
     console.log("application listen on port 3000");

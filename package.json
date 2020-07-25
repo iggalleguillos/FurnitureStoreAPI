@@ -16,8 +16,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.1.0",
     "koa-routes": "^7.4.0",
-    "mongoose": "^5.9.25",
-    "uuid": "^8.2.0"
+    "mongoose": "^5.9.25"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

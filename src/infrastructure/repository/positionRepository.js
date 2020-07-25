@@ -1,4 +1,3 @@
-const mongoose = require("../mongoose/mongoose");
 
 const Position = require('../mongoose/schemas/positionSchema');
 const PositionRepository = require('../../domain/interfaces/positionRepository');
@@ -12,7 +11,7 @@ module.exports = class extends PositionRepository {
 
     async addPosition(positionEntity){
 
-        const { id, name, description } = positionEntity;
+        const { name, description } = positionEntity;
         
         const mongoosePosition = new Position({ name, description });
         await mongoosePosition.save();
@@ -22,17 +21,15 @@ module.exports = class extends PositionRepository {
 
     async getPositions(){
 
-        let positions = await Position.find();
+        return await Position.find();
 
-        positions.map((position) => {
-            return new Position(position._id, position.id, position.name, position.description);
-        });
-
-        return positions;
+        // positions.map((position) => {
+        //     return new Position(position._id, position.name, position.description);
+        // });
     }
 
     async getPositionById(id){
 
-        return await Position.findOne({id : id});
+        return await Position.findById(id);
     }
 }

@@ -5,16 +5,12 @@ const uuid = require('uuid');
 const Position = require('./positionSchema');
 
 const employee = new mongoose.Schema({
-    id: {
-        type: String,
-        default: uuid.v4()
-    },
     name: {
         type: String
     },
     position: {
-        type: Schema.ObjectId, ref: Position
+        type: mongoose.Types.ObjectId, ref: 'Position'
     }
 });
 
-module.exports = Employee = mongoose.model(employee);
+module.exports = mongoose.model('Employee', employee);
