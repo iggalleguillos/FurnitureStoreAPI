@@ -1,5 +1,4 @@
 
-const positionRepository = require('../../../infrastructure/repository/positionRepository');
 const Position = require('../../../domain/entities/positionEntity');
 
 

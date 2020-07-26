@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 
 const stock = new mongoose.Schema({
     amount: {
-        type: Number
+        type: Number,
+        default: 0
     },
     admissionDate: {
         type: Date,

@@ -4,7 +4,7 @@ const EmployeeController = require('../controllers/employeeController');
 
 const router = new Router();
 
-router.get('/api/employees', async (ctx, res) => {
+router.get('/api/employees', async (ctx) => {
 
     ctx.status = 200;
     return ctx.response.body = await EmployeeController.GetEmployees();

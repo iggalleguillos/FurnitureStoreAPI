@@ -1,8 +1,5 @@
 
 const mongoose = require('mongoose');
-const uuid = require('uuid');
-
-const Position = require('./positionSchema');
 
 const employee = new mongoose.Schema({
     name: {

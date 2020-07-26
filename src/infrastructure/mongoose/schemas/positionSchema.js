@@ -1,6 +1,5 @@
 
 const mongoose = require('mongoose');
-const uuid = require('uuid');
 
 const position = new mongoose.Schema({
     name: {
