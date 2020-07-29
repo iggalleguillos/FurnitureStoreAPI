@@ -5,7 +5,7 @@ module.exports = class {
     addFurniture(furniture){
     }
 
-    getAllFurnitures(){
+    getFurnitures(){
     }
 
     getFurnitureById(furnitureId){     

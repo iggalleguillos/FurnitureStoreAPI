@@ -13,4 +13,8 @@ module.exports = class {
     getMaterialById(id){
         
     }
+
+    addStock(materialId, amountStock){
+        
+    }
 }

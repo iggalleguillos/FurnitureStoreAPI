@@ -9,7 +9,8 @@ const material = new mongoose.Schema({
         type: String
     },
     stocks: [{
-        type: mongoose.Schema.Types.ObjectId, ref: 'Stock'
+        type: mongoose.Schema.Types.ObjectId, ref: 'Stock',
+        default: []
     }]
 });
 

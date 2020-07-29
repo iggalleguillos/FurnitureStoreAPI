@@ -2,10 +2,11 @@
 
 module.exports = class {
     
-    constructor(id, name, description, materials){
+    constructor(id, name, description, measurements,materials){
         this.id = id,
         this.name = name, 
-        this.description = description
-        this.materials = materials //Material Class
+        this.description = description,
+        this.measurements = measurements,
+        this.materials = materials
     }
 }

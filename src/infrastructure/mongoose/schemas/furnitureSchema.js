@@ -1,14 +1,32 @@
 const mongoose = require('mongoose');
 
-const Material = require('./materialSchema');
 
 const furniture = new mongoose.Schema({
     name: {
         type: String
     },
-    materials:[{
-      type: Schema.ObjectId, ref: Material
-    }]
+    description:{
+        type: String
+    },
+    measurements:{
+      height: {
+        type: Number
+      },
+      width: {
+        type: Number
+      },
+      length:{
+        type: Number
+      }
+    },
+    materialsToBuildIt:{
+      type: [
+        {
+          material: { type: mongoose.Schema.ObjectId, ref: 'Material' },
+          amount: { type: Number },
+        }
+    ] 
+    }
 });
 
 module.exports = mongoose.model('Furniture', furniture);

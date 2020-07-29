@@ -21,6 +21,12 @@ router.get('/api/materials', async (ctx) => {
 
     ctx.status = 200;
     return ctx.response.body = await MaterialController.getMaterials();
-})
+});
+
+router.post('/api/material/{:id}/stock', async (ctx) => {
+
+    ctx.status = 201;
+    return ctx.response.body = await MaterialController.addMaterialStock(ctx.params.id, ctx.request.body.amount);
+});
 
 module.exports = router;
