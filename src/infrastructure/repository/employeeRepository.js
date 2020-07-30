@@ -22,6 +22,6 @@ module.exports = class extends EmployeeRepository {
 
     async getEmployeeById(id){
 
-        return await Employee.findById(id);
+        return await Employee.findById(id).populate('position');
     }
 }

@@ -20,6 +20,6 @@ module.exports = {
 
     async GetEmployeeById(id){
 
-        return await GetEmployeeById(id);
+        return await GetEmployeeById(id, employeeRepository);
     }
 }
